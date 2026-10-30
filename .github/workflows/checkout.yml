@@ -1,0 +1,15 @@
+name: Checkout Example
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  checkout-example:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v4
+
+      - name: Verification - list directory contents
+        run: ls -alhR
